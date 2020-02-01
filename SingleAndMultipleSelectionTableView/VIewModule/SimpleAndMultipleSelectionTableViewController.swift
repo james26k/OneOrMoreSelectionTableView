@@ -15,7 +15,7 @@ class SimpleAndMultipleSelectionTableViewController: UIViewController {
     private let sections = ["お好きな銭湯", "サウナ温度", "水風呂温度", "hoge"]
     private let cellTitles = [
         ["光明泉", "文化浴泉", "北欧", "八幡湯", "かるまる"],
-        ["81~85", "86~90", "91~95", "96~100", "100度越えがええ"],
+        ["81~85", "86~90", "91~95", "96~100", "100度越えがお好き"],
         ["25~21", "20~18", "17~15", "かるまるのサンダートルネードくらいくキンキンで"],
         ["hoge", "hoge", "hoge", "hoge", "hoge",
          "hoge", "hoge", "hoge", "hoge", "hoge",
@@ -24,6 +24,7 @@ class SimpleAndMultipleSelectionTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .secondarySystemBackground
         tableView.backgroundColor = .secondarySystemBackground
         tableView.tableFooterView = UIView()
         // UITableView全体は複数選択可能に設定
@@ -33,10 +34,10 @@ class SimpleAndMultipleSelectionTableViewController: UIViewController {
         tableView.delegate = self
         tableView.register(CustomCell.self, forCellReuseIdentifier: "CustomCell")
         view.addSubview(tableView)
-        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        tableView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
     }
 }
 

@@ -14,8 +14,9 @@ final class CustomHeaderView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .secondarySystemBackground
         headerTitleLabel.tintColor = .label
-        headerTitleLabel.font = .boldSystemFont(ofSize: 14)
+        headerTitleLabel.font = .boldSystemFont(ofSize: 16)
         headerTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(headerTitleLabel)
         headerTitleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
