@@ -65,10 +65,25 @@ extension SimpleAndMultipleSelectionTableViewController: UITableViewDataSource {
 }
 
 extension SimpleAndMultipleSelectionTableViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
-        return sections[indexPath.section] == "銭湯" ? nil : indexPath
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        // SingleSelectionSectionであれば処理を通す
+        guard sections[indexPath.section] == "お好きな銭湯" else { return indexPath }
+        // tableViewから選択されているIndexPathの配列を取得
+        guard let selectedIndexPaths = tableView.indexPathsForSelectedRows else { return indexPath }
+        selectedIndexPaths.filter {
+            // 選択したCell以外で既に選択されているIndexPathに絞る
+            sections[$0.section] == "お好きな銭湯" && $0 != indexPath
+        }.forEach {
+            // 非選択状態にする
+            tableView.deselectRow(at: $0, animated: true)
+        }
+        return indexPath
     }
 
+    func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
+        // 既に選択済みのCellであればnilを返して非選択処理を弾く
+        return sections[indexPath.section] == "お好きな銭湯" ? nil : indexPath
+    }
 }
 
 private final class CustomCell: UITableViewCell {
