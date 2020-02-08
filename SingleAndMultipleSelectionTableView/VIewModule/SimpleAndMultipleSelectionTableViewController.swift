@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class SimpleAndMultipleSelectionTableViewController: UIViewController {
-    private let tableView = UITableView()
+    private let tableView = UITableView(frame: .zero, style: .grouped)
 
     private let sections = ["お好きな銭湯", "サウナ温度", "水風呂温度", "hoge"]
     private let cellTitles = [
@@ -46,14 +46,12 @@ extension SimpleAndMultipleSelectionTableViewController: UITableViewDataSource {
         sections.count
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cellTitles[section].count
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section]
     }
 
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = CustomHeaderView()
-        headerView.setup(headerTitle: sections[section])
-        return headerView
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        cellTitles[section].count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
