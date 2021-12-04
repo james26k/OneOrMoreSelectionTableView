@@ -1,5 +1,5 @@
 //
-//  SimpleAndMultipleSelectionTableViewController.swift
+//  SingleAndMultipleSelectionTableViewController.swift
 //  SingleAndMultipleSelectionTableView
 //
 //  Created by Kohei Hayashi on 2020/01/30.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SimpleAndMultipleSelectionTableViewController: UIViewController {
+class SingleAndMultipleSelectionTableViewController: UIViewController {
     private let tableView = UITableView(frame: .zero, style: .grouped)
 
     private let sections = ["お好きな銭湯", "サウナ温度", "水風呂温度", "hoge"]
@@ -41,7 +41,7 @@ class SimpleAndMultipleSelectionTableViewController: UIViewController {
     }
 }
 
-extension SimpleAndMultipleSelectionTableViewController: UITableViewDataSource {
+extension SingleAndMultipleSelectionTableViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         sections.count
     }
@@ -62,7 +62,7 @@ extension SimpleAndMultipleSelectionTableViewController: UITableViewDataSource {
     }
 }
 
-extension SimpleAndMultipleSelectionTableViewController: UITableViewDelegate {
+extension SingleAndMultipleSelectionTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         // SingleSelectionSectionであれば処理を通す
         guard sections[indexPath.section] == "お好きな銭湯" else { return indexPath }

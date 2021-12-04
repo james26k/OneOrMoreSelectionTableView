@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		55AD783A23E2CD8F00CDC479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD783923E2CD8F00CDC479 /* AppDelegate.swift */; };
 		55AD783C23E2CD8F00CDC479 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD783B23E2CD8F00CDC479 /* SceneDelegate.swift */; };
-		55AD783E23E2CD8F00CDC479 /* SimpleAndMultipleSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD783D23E2CD8F00CDC479 /* SimpleAndMultipleSelectionTableViewController.swift */; };
+		55AD783E23E2CD8F00CDC479 /* SingleAndMultipleSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD783D23E2CD8F00CDC479 /* SingleAndMultipleSelectionTableViewController.swift */; };
 		55AD784323E2CD9300CDC479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55AD784223E2CD9300CDC479 /* Assets.xcassets */; };
 		55AD784623E2CD9300CDC479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AD784423E2CD9300CDC479 /* LaunchScreen.storyboard */; };
 		55AD785123E2CD9300CDC479 /* SingleAndMultipleSelectionTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD785023E2CD9300CDC479 /* SingleAndMultipleSelectionTableViewTests.swift */; };
@@ -37,7 +37,7 @@
 		55AD783623E2CD8F00CDC479 /* SingleAndMultipleSelectionTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleAndMultipleSelectionTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55AD783923E2CD8F00CDC479 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55AD783B23E2CD8F00CDC479 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55AD783D23E2CD8F00CDC479 /* SimpleAndMultipleSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAndMultipleSelectionTableViewController.swift; sourceTree = "<group>"; };
+		55AD783D23E2CD8F00CDC479 /* SingleAndMultipleSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAndMultipleSelectionTableViewController.swift; sourceTree = "<group>"; };
 		55AD784223E2CD9300CDC479 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55AD784523E2CD9300CDC479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55AD784723E2CD9300CDC479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		55C3A63C23E5267700E5F7BA /* VIewModule */ = {
 			isa = PBXGroup;
 			children = (
-				55AD783D23E2CD8F00CDC479 /* SimpleAndMultipleSelectionTableViewController.swift */,
+				55AD783D23E2CD8F00CDC479 /* SingleAndMultipleSelectionTableViewController.swift */,
 			);
 			path = VIewModule;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55AD783E23E2CD8F00CDC479 /* SimpleAndMultipleSelectionTableViewController.swift in Sources */,
+				55AD783E23E2CD8F00CDC479 /* SingleAndMultipleSelectionTableViewController.swift in Sources */,
 				55AD783A23E2CD8F00CDC479 /* AppDelegate.swift in Sources */,
 				55AD783C23E2CD8F00CDC479 /* SceneDelegate.swift in Sources */,
 			);
