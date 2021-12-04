@@ -97,7 +97,7 @@
 		55AD783823E2CD8F00CDC479 /* SingleAndMultipleSelectionTableView */ = {
 			isa = PBXGroup;
 			children = (
-				55C3A63C23E5267700E5F7BA /* VIewModule */,
+				55C3A63C23E5267700E5F7BA /* ViewModule */,
 				55AD783923E2CD8F00CDC479 /* AppDelegate.swift */,
 				55AD783B23E2CD8F00CDC479 /* SceneDelegate.swift */,
 				55AD784223E2CD9300CDC479 /* Assets.xcassets */,
@@ -125,12 +125,12 @@
 			path = SingleAndMultipleSelectionTableViewUITests;
 			sourceTree = "<group>";
 		};
-		55C3A63C23E5267700E5F7BA /* VIewModule */ = {
+		55C3A63C23E5267700E5F7BA /* ViewModule */ = {
 			isa = PBXGroup;
 			children = (
 				55AD783D23E2CD8F00CDC479 /* SingleAndMultipleSelectionTableViewController.swift */,
 			);
-			path = VIewModule;
+			path = ViewModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
